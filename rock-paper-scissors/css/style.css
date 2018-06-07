@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  display: block;
+  position: relative;
+  font-size: 6rem;
+  letter-spacing: 5px;
+}
+/* .banner {
+  height: 100vh;
+} */
+
+h1 {
+  font-size: 100px;
+  color: black;
+}
+
+.banner {
+  content: '';
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url('../images/rps-background.jpg');
+  animation: animate 30s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 0 998px;
+  }
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.round {
+  border: 1px solid red;
+  height: 50px;
+  width: 100px;
+
+}
+
+.score {
+  border: 1px solid green;
+  height: 50px;
+  width: 100px;
+}
+
+
+.battlefield {
+  display: flex;
+  border: 1px solid blue;
+  height: 200px;
+  width: 100%;
+}
+
+.weapon1 {
+  position: absolute;
+  border: 1px solid orange;
+  height: 100px;
+  width: 100px;
+}
+
+.weapon2 {
+  align-self: flex-end;
+  border: 1px solid black;
+  height: 100px;
+  width: 100px;
+}
+
+
+
+
+
+ /* .banner {
+   background: url('http://www.usa.dottinghill.com/_uploads/designs/72/200x150thumb.gif.jpg.gif.gif');
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120px;
+    height: 120px;
+    margin:-60px 0 0 -60px;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } } */
