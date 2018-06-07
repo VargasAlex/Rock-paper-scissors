@@ -17,7 +17,10 @@ $(document).ready(function(){
       compChoice();
       setTimeout(function(){
         alert(checkWinner());
-      }, 250);
+      }, 300);
+      setTimeout(function(){
+        $('.choices').append(rock);
+      }, 700);
     });
 
     paper.click(function () {
@@ -26,10 +29,10 @@ $(document).ready(function(){
       compChoice();
       setTimeout(function(){
         alert(checkWinner());
-      }, 250);
-      setTimeout(function(){
-        playerWeapon.removeClass(paper);
-      }, 500);
+      }, 300);
+      setTimeout(function (){
+        $('.choices').append(paper);
+      }, 700);
     });
 
     scissors.click(function () {
@@ -39,6 +42,9 @@ $(document).ready(function(){
       setTimeout(function(){
         alert(checkWinner());
       }, 250);
+      setTimeout(function (){
+        $('.choices').append(scissors);
+      }, 700);
     });
 
     let resetBtn = $('.restart-Btn');
