@@ -1,23 +1,50 @@
 $(document).ready(function(){
 
-  let playerChoice = undefined;
-  let computerChoice = undefined;
-  const rock = $('#rock');
-  const paper = $('#paper');
-  const scissors = $('#scissors');
+  let playerChoice;
+  let computerChoice;
+  let score = 0;
+  let cpuScore = 0;
+  const playerWeapon = $('.playerWeapon');
+  const computerWeapon = $('.computerWeapon');
+  const rock = $('.rock');
+  const paper = $('.paper');
+  const scissors = $('.scissors');
 
 
     rock.click(function(){
       playerChoice = 'rock';
+      playerWeapon.append(rock);
+      compChoice();
+      setTimeout(function(){
+        alert(checkWinner());
+      }, 250);
     });
 
     paper.click(function () {
       playerChoice = 'paper';
+      playerWeapon.append(paper);
+      compChoice();
+      setTimeout(function(){
+        alert(checkWinner());
+      }, 250);
+      setTimeout(function(){
+        playerWeapon.removeClass(paper);
+      }, 500);
     });
 
     scissors.click(function () {
       playerChoice = 'scissors';
+      playerWeapon.append(scissors);
+      compChoice();
+      setTimeout(function(){
+        alert(checkWinner());
+      }, 250);
     });
+
+    let resetBtn = $('.restart-Btn');
+      resetBtn.click(function() {
+        window.location.reload();
+      })
 
     function compChoice () {
       computerChoice = Math.floor(Math.random() * 3) + 1;
@@ -36,18 +63,47 @@ $(document).ready(function(){
         result = 'Tie!';
       } else if (playerChoice === 'rock' && computerChoice === 'paper') {
         result = 'You lose!';
+        computerScore();
       } else if (playerChoice === 'rock' && computerChoice === 'scissors') {
         result = 'You win!';
+        playerScore();
       } else if (playerChoice === 'paper' && computerChoice === 'rock') {
         result = 'You win!';
+        playerScore();
       } else if (playerChoice === 'paper' && computerChoice === 'scissors') {
         result = 'You lose!';
+        computerScore();
       } else if (playerChoice === 'scissors' && computerChoice === 'rock') {
         result = 'You lose!';
+        computerScore();
       } else if (playerChoice === 'scissors' && computerChoice === 'paper') {
         result = 'You win!'
+        playerScore();
+      }
+      return result;
+    };
+
+    function playerScore () {
+      score = score + 1;
+      $('.userScore').append(score);
+      $('.userScore').html(score);
+      if (score === 5) {
+        //placeholder
+        alert('You are awesome!')
       }
     };
+
+    function computerScore () {
+      cpuScore = cpuScore + 1;
+      $('.compScore').append(cpuScore);
+      $('.compScore').html(cpuScore);
+      if (cpuScore === 5) {
+        //placeholder
+          alert('You are terrible');
+      }
+    }
+
+
 
 
 

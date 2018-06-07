@@ -1,3 +1,5 @@
+/* Opening HTML (index.html) */
+
 body {
   margin: 0;
   padding: 0;
@@ -39,6 +41,8 @@ h1 {
   }
 }
 
+/* Game HTML (main.html) */
+
 .background {
   width: 100%;
   height: 100%;
@@ -46,15 +50,20 @@ h1 {
   top: 0;
 }
 
-.round {
+.userScore {
+  border: 1px solid green;
+  height: 50px;
+  width: 100px;
+}
+
+.timer {
   border: 1px solid red;
   height: 50px;
   width: 100px;
-
 }
 
-.score {
-  border: 1px solid green;
+.compScore {
+  border: 1px solid pink;
   height: 50px;
   width: 100px;
 }
@@ -67,18 +76,56 @@ h1 {
   width: 100%;
 }
 
-.weapon1 {
+.playerWeapon {
   position: absolute;
   border: 1px solid orange;
   height: 100px;
   width: 100px;
 }
 
-.weapon2 {
+.cpuWeapon {
   align-self: flex-end;
   border: 1px solid black;
   height: 100px;
   width: 100px;
+}
+
+.rock {
+  height: 100px;
+  width: 100px;
+}
+
+.paper {
+  height: 100px;
+  width: 100px;
+}
+
+.scissors {
+  height: 100px;
+  width: 100px;
+}
+
+.restart-Btn {
+  width: 135px;
+  height: 60px;
+  border: 5px solid black;
+  font-size: 30px;
+  font-family: 'Jua', sans-serif;
+  margin: 10px;
+  outline: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  text-align: center;
+}
+
+.restart-Btn:hover {
+  background-color: #aff441;
+}
+
+.restart-Btn:active {
+  background-color: #aff441;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 
