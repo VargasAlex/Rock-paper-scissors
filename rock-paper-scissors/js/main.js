@@ -9,6 +9,9 @@ $(document).ready(function(){
   const rock = $('.rock');
   const paper = $('.paper');
   const scissors = $('.scissors');
+  const cpuRock = $('.js-rock');
+  const cpuPaper = $('.js-paper');
+  const cpuScissors = $('.js-scissors');
 
 
     rock.click(function(){
