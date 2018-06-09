@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="battle">
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,41 +7,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="css/style.css"/>
   <link href="https://fonts.googleapis.com/css?family=Jua" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
+  <embed src="audio/Street-fighter-start.mp3" hidden="true" autostart="true">
+  <audio id="toasty">
+    <source src="audio/Toasty.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="win">
+    <source src="audio/you-win.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="lose">
+    <source src="audio/you-lose.mp3" type="audio/mpeg">
+  </audio>
   <main class="contain">
     <div class="main-page">
-      <div class="userScore"></div>
-      <div class="timer"></div>
-      <div class="compScore"></div>
+      <div class="userBoard">Player Score:</div>
+        <div class="userScore"></div>
+      <div class="compBoard">Computer Score:</div>
+        <div class="compScore"></div>
+      </div>
     </div>
+    <div class="tie-announcer">Tie!</div>
+    <div class="win-announcer">Round Won!</div>
+    <div class="lose-announcer">Round Lost!</div>
     <section class="battlefield">
       <!-- <img class="rock" src="images/rock-cartoon.png"/>
       <img class="paper" src="images/paper-cartoon.png"/>
       <img class="scissors" src="images/scissors-cartoon.png"/> -->
       <span class="playerWeapon"></span>
+      <section class="game-winner">You won!</section>
+      <section class="game-loser">You lost!</section>
       <img class="vs-logo" src="images/VS-logo.png"/>
       <span class="cpuWeapon"></span>
       <!-- <img class="background" src="https://fc05.deviantart.net/fs71/f/2013/098/e/7/pokemon_x_y_battle_scene_by_jenske05-d5ynr9c.png"> -->
     </section>
-    <section class="round-winner"></section>
-    <section class="round-lose"></section>
-    <section class="round-tie"></section>
-    <section class="game-winner"></section>
-    <section class="game-loser"></section>
     <footer class="choices">
-      <img class="rock js-rock" src="images/rock-cartoon.png" />
-      <img class="paper js-paper" src="images/paper-cartoon.png" />
-      <img class="scissors js-scissors" src="images/scissors-cartoon.png"/>
+      <img class="rock r-scale" src="images/rock-cartoon.png" />
+      <img class="paper p-scale" src="images/paper-cartoon.png" />
+      <img class="scissors s-scale" src="images/scissors-cartoon.png"/>
+      <img class="cpu-rock" src="images/rock-cartoon.png" />
+      <img class="cpu-paper" src="images/paper-cartoon.png" />
+      <img class="cpu-scissors" src="images/scissors-cartoon.png" />
     </footer>
     <footer class="restart">
       <div class="replay">
         <p>Would you like to play again?</p>
-        <input class="restart-Btn" type="reset" value="Restart"/>
+        <input class="restart-Btn" type="reset" value="Restart" />
+        <img class ="gameover" src="images/gameover.png"/>
       </div>
     </footer>
   </main>
+
 
 
 

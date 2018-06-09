@@ -1,33 +1,42 @@
 /* Opening HTML (index.html) */
-
-body {
+.index-body {
+  /* display: flex;
+  justify-content: center;
+  align-content: center; */
+  text-align: center;
   margin: 0;
   padding: 0;
 }
 
 .title {
-  display: block;
-  position: relative;
+  margin-top: 400px;
+  font-family: 'Jua', sans-serif;
+  /* display: block; */
+  /* position: relative; */
   font-size: 6rem;
   letter-spacing: 5px;
+  color: #00A591;
+  text-shadow: 5px 5px black;
 }
 /* .banner {
   height: 100vh;
 } */
 
-h1 {
+/* h1 {
   font-size: 100px;
   color: black;
-}
+} */
 
-.banner {
+.document {
   content: '';
   height: 100vh;
   width: 100vw;
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   left: 0;
   background: url('../images/rps-background.jpg');
+  background-size: cover;
+  /* background-size: cover; */
   animation: animate 30s linear infinite;
 }
 
@@ -41,12 +50,54 @@ h1 {
   }
 }
 
+.button {
+    font-family: 'Jua', sans-serif;
+    padding: 1rem 1.5rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 3rem;
+    animation: bounceIn 1s ease-in-out infinite;
+    color: #9B2335;
+    text-shadow: 3px 3px black;
+    /* border: 5px solid black; */
+    /* border-radius: 50%; */
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 /* Game HTML (main.html) */
+.battle {
+  content: '';
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background: url('../images/Arena-Battle.jpg');
+  background-size: cover;
+}
+
 .main-page {
+  height: 100px;
+  /* border: 3px solid black; */
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+
 }
 .background {
   width: 100%;
@@ -55,68 +106,160 @@ h1 {
   top: 0;
 }
 
-.userScore {
+.userBoard {
   font-family: 'Jua', sans-serif;
-  border: 1px solid green;
-  height: 50px;
-  width: 100px;
+  font-size: 30px;
+  /* border: 1px solid red; */
+  align-items: center;
   text-align: center;
-  margin-top: 20px;
-  margin-left: 20px;
+  text-shadow: 2px 2px#00d164;
 }
 
-.timer {
+.userScore {
   font-family: 'Jua', sans-serif;
-  border: 1px solid red;
-  height: 100px;
+  /* border: 1px solid green; */
+  text-align: center;
+  font-size: 40px;
+  height: 50px;
   width: 100px;
-  margin-top: 20px;
+  margin-top: 2px;
+  text-shadow: 2px 2px#00d164;
+  /* text-align: center;
+  margin-top: 50px;
+  margin-left: -475px;
+  font-size: 40px;  */
+}
+
+.compBoard {
+  font-family: 'Jua', sans-serif;
+  font-size: 30px;
+  /* border: 1px solid pink; */
+  align-items: center;
+  text-align: center;
+  text-shadow: 2px 2px #00d164;
+  /* font-family: 'Jua', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  border: 1px solid pink;
+  height: 50px;
+  width: 100px; */
 }
 
 .compScore {
   font-family: 'Jua', sans-serif;
-  border: 1px solid pink;
+  /* border: 1px solid pink; */
+  text-align: center;
+  font-size: 40px;
   height: 50px;
   width: 100px;
-  text-align: center;
-  margin-top: 20px;
-  margin-right: 20px;
+  margin-top: 2px;
+  text-shadow: 2px 2px #00d164;
+  /* text-align: center;
+  margin-top: 50px;
+  margin-right: 300px;
+  font-size: 40px;  */
 }
 
+.tie-announcer {
+  display: none;
+  margin-top: 50px;
+  margin-right: 50px;
+  text-align: center;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 60px;
+  color: #fffd00;
+  text-shadow: 3px 3px #ff3230;
+}
+
+.win-announcer {
+  display: none;
+  margin-top: 50px;
+  margin-right: 50px;
+  text-align: center;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 60px;
+  color: #fffd00;
+  text-shadow: 3px 3px #ff3230;
+}
+
+.lose-announcer {
+  display: none;
+  margin-top: 50px;
+  margin-right: 50px;
+  text-align: center;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 60px;
+  color: #fffd00;
+  text-shadow: 3px 3px #ff3230;
+}
 
 .battlefield {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
-  margin-top: 100px;
+  margin-top: 50px;
   justify-content: space-between;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   height: 500px;
   width: 100%;
 }
 
 .playerWeapon {
-  /* position: absolute; */
-  border: 1px solid orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid orange; */
   height: 300px;
   width: 300px;
   margin-top: 100px;
   margin-left: 250px;
 }
 
+.game-winner {
+  display: none;
+  font-family: 'Jua', sans-serif;
+  font-size: 40px;
+  color: white;
+}
+
+.game-loser {
+  display: none;
+  font-family: 'Jua', sans-serif;
+  font-size: 40px;
+  color:white;
+}
+
+.vs-logo {
+  display: none;
+  margin-right: 45px;
+}
+
 .cpuWeapon {
-  /* align-self: flex-end; */
-  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid black; */
   height: 300px;
   width: 300px;
   margin-top: 100px;
   margin-right: 250px;
 }
 
+.choices {
+  margin-left: 250px;
+}
+
 .rock {
   height: 100px;
   width: 100px;
+  /* transition-duration: 1s;
+  transition-property: transform; */
 }
+/*
+.rock:active {
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+} */
 
 .paper {
   height: 100px;
@@ -128,14 +271,42 @@ h1 {
   width: 100px;
 }
 
+.cpu-rock {
+  display: none;
+  height: 300px;
+  width: 300px;
+}
+
+.cpu-paper {
+  display: none;
+  height: 300px;
+  width: 300px;
+}
+
+.cpu-scissors {
+  display: none;
+  height: 300px;
+  width: 300px;
+}
+
 .restart {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center; */
+  display: none;
   text-align: center;
   font-family: 'Jua', sans-serif;
 }
 
+.gameover {
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  /* background: url('../images/gameover.png'); */
+  background-size: cover;
+  position: fixed;
+}
 
 .restart-Btn {
   width: 135px;
@@ -148,14 +319,15 @@ h1 {
   border-radius: 15px;
   box-shadow: 0 9px #999;
   text-align: center;
+  background-color: #fffd00;
 }
 
 .restart-Btn:hover {
-  background-color: #aff441;
+  background-color: #ff3230;
 }
 
 .restart-Btn:active {
-  background-color: #aff441;
+  background-color: #ff3230;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
