@@ -289,32 +289,58 @@
   width: 300px;
 }
 
+.game-winner {
+  display: none;
+  margin-top: 50px;
+  color:#ea1737;
+  text-align: center;
+  text-shadow: 4px 4px black;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 70px;
+}
+
+.game-loser {
+  display: none;
+  margin-top: 50px;
+  color:#ea1737;
+  text-align: center;
+  text-shadow: 4px 4px black;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 70px;
+}
+
 .restart {
   /* display: flex;
   flex-direction: column;
   justify-content: center; */
   display: none;
   text-align: center;
-  font-family: 'Jua', sans-serif;
-}
-
-.gameover {
+  font-family: 'Press Start 2P', cursive;
+  background: url('../images/gameover.png');
+  background-size: cover;
   height: 100vh;
   width: 100vw;
   top: 0;
   left: 0;
-  /* background: url('../images/gameover.png'); */
-  background-size: cover;
   position: fixed;
+}
+
+p {
+  margin-top: 650px;
+  margin-left: 1450px;
+  font-size: 20px;
+  color: #ea1737;
+  text-shadow: 2px 2px black;
 }
 
 .restart-Btn {
   width: 135px;
   height: 60px;
   border: 5px solid black;
-  font-size: 30px;
-  font-family: 'Jua', sans-serif;
+  font-size: 15px;
+  font-family: 'Press Start 2P', cursive;
   margin: 10px;
+  margin-left: 1450px;
   outline: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
@@ -323,14 +349,27 @@
 }
 
 .restart-Btn:hover {
-  background-color: #ff3230;
+  background-color: #41f46e;
 }
 
 .restart-Btn:active {
-  background-color: #ff3230;
+  background-color: #41f46e;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
+
+
+/*
+.gameover {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background: url('../images/gameover.png');
+  background-size: cover;
+  position: fixed;
+}  */
 
 
 

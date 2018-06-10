@@ -156,13 +156,13 @@ $(document).ready(function(){
       score += 1;
       $('.userScore').append(score);
       $('.userScore').html(score);
-      if (score === 10) {
+      if (score === 2) {
         $('audio#win')[0].play();
         setTimeout(function () {
           $('.battle').css('background', 'none');
-          $('gameover').css('display', 'block');
           $('.game-winner').css('display', 'block');
           $('.restart').css('display', 'block');
+          $('.gameover').css('display', 'block');
         }, 1050);
       }
     };
@@ -172,13 +172,13 @@ $(document).ready(function(){
       cpuScore += 1;
       $('.compScore').append(cpuScore);
       $('.compScore').html(cpuScore);
-      if (cpuScore === 10) {
+      if (cpuScore === 2) {
         $('audio#lose')[0].play();
         setTimeout(function () {
           $('.battle').css('background','none');
-          $('gameover').css('display', 'block');
           $('.game-loser').css('display', 'block');
-          $('.restart').css('display', 'block');
+          $('.restart').css('display', 'flex');
+          $('.gameover').css('display', 'block');
         }, 1050);
       }
     };
