@@ -1,8 +1,5 @@
 /* Opening HTML (index.html) */
 .index-body {
-  /* display: flex;
-  justify-content: center;
-  align-content: center; */
   text-align: center;
   margin: 0;
   padding: 0;
@@ -11,32 +8,20 @@
 .title {
   margin-top: 400px;
   font-family: 'Jua', sans-serif;
-  /* display: block; */
-  /* position: relative; */
   font-size: 6rem;
   letter-spacing: 5px;
   color: #00A591;
   text-shadow: 5px 5px black;
 }
-/* .banner {
-  height: 100vh;
-} */
-
-/* h1 {
-  font-size: 100px;
-  color: black;
-} */
 
 .document {
   content: '';
   height: 100vh;
   width: 100vw;
-  /* position: absolute; */
   top: 0;
   left: 0;
   background: url('../images/rps-background.jpg');
   background-size: cover;
-  /* background-size: cover; */
   animation: animate 30s linear infinite;
 }
 
@@ -60,8 +45,88 @@
     animation: bounceIn 1s ease-in-out infinite;
     color: #9B2335;
     text-shadow: 3px 3px black;
-    /* border: 5px solid black; */
-    /* border-radius: 50%; */
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Intro HTML (intro.html */
+.intro-body {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-color: black;
+}
+.intro-main {
+  font-family: 'Jua', sans-serif;
+  color: white;
+  margin-top: 80px;
+}
+
+.h1-intro {
+  font-size: 50px;
+}
+
+.h2-intro {
+  font-size: 30px;
+}
+
+.section-intro {
+  font-size: 25px;
+}
+
+.a-intro {
+  text-decoration: none;
+  font-family: 'Permanent Marker', cursive;
+  color: #9B2335;
+  margin-left: 5px;
+}
+
+.rules {
+  font-size: 20px;
+}
+
+.bottom {
+  margin-top: 125px;
+  margin-left: 325px;
+}
+
+#loading {
+  height: 50px;
+  width: 50px;
+		-webkit-animation: rotation 2s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+		from {
+				-webkit-transform: rotate(0deg);
+		}
+		to {
+				-webkit-transform: rotate(359deg);
+		}
+}
+
+.btn {
+    font-family: 'Press Start 2P', cursive;
+    padding: 1rem 1.5rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 3rem;
+    animation: bounceIn 1s ease-in-out infinite;
+    color: #9B2335;
+    text-shadow: 3px 3px white;
 }
 
 @keyframes bounceIn {
@@ -91,7 +156,6 @@
 
 .main-page {
   height: 100px;
-  /* border: 3px solid black; */
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
@@ -109,7 +173,6 @@
 .userBoard {
   font-family: 'Jua', sans-serif;
   font-size: 30px;
-  /* border: 1px solid red; */
   align-items: center;
   text-align: center;
   text-shadow: 2px 2px#00d164;
@@ -117,47 +180,30 @@
 
 .userScore {
   font-family: 'Jua', sans-serif;
-  /* border: 1px solid green; */
   text-align: center;
   font-size: 40px;
   height: 50px;
   width: 100px;
   margin-top: 2px;
   text-shadow: 2px 2px#00d164;
-  /* text-align: center;
-  margin-top: 50px;
-  margin-left: -475px;
-  font-size: 40px;  */
 }
 
 .compBoard {
   font-family: 'Jua', sans-serif;
   font-size: 30px;
-  /* border: 1px solid pink; */
   align-items: center;
   text-align: center;
   text-shadow: 2px 2px #00d164;
-  /* font-family: 'Jua', sans-serif;
-  font-size: 20px;
-  text-align: center;
-  border: 1px solid pink;
-  height: 50px;
-  width: 100px; */
 }
 
 .compScore {
   font-family: 'Jua', sans-serif;
-  /* border: 1px solid pink; */
   text-align: center;
   font-size: 40px;
   height: 50px;
   width: 100px;
   margin-top: 2px;
   text-shadow: 2px 2px #00d164;
-  /* text-align: center;
-  margin-top: 50px;
-  margin-right: 300px;
-  font-size: 40px;  */
 }
 
 .tie-announcer {
@@ -199,7 +245,6 @@
   flex-direction: row;
   margin-top: 50px;
   justify-content: space-between;
-  /* border: 1px solid blue; */
   height: 500px;
   width: 100%;
 }
@@ -208,7 +253,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border: 1px solid orange; */
   height: 300px;
   width: 300px;
   margin-top: 100px;
@@ -238,7 +282,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border: 1px solid black; */
   height: 300px;
   width: 300px;
   margin-top: 100px;
@@ -252,14 +295,7 @@
 .rock {
   height: 100px;
   width: 100px;
-  /* transition-duration: 1s;
-  transition-property: transform; */
 }
-/*
-.rock:active {
-  transform: rotate(360deg);
-  -webkit-transform: rotate(360deg);
-} */
 
 .paper {
   height: 100px;
@@ -310,9 +346,6 @@
 }
 
 .restart {
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center; */
   display: none;
   text-align: center;
   font-family: 'Press Start 2P', cursive;
@@ -358,35 +391,3 @@ p {
   transform: translateY(4px);
 }
 
-
-/*
-.gameover {
-  display: none;
-  height: 100vh;
-  width: 100vw;
-  top: 0;
-  left: 0;
-  background: url('../images/gameover.png');
-  background-size: cover;
-  position: fixed;
-}  */
-
-
-
-
-
- /* .banner {
-   background: url('http://www.usa.dottinghill.com/_uploads/designs/72/200x150thumb.gif.jpg.gif.gif');
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 120px;
-    height: 120px;
-    margin:-60px 0 0 -60px;
-    -webkit-animation:spin 4s linear infinite;
-    -moz-animation:spin 4s linear infinite;
-    animation:spin 4s linear infinite;
-}
-@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } } */

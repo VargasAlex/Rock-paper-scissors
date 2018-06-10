@@ -156,7 +156,7 @@ $(document).ready(function(){
       score += 1;
       $('.userScore').append(score);
       $('.userScore').html(score);
-      if (score === 2) {
+      if (score === 10) {
         $('audio#win')[0].play();
         setTimeout(function () {
           $('.battle').css('background', 'none');
@@ -172,7 +172,7 @@ $(document).ready(function(){
       cpuScore += 1;
       $('.compScore').append(cpuScore);
       $('.compScore').html(cpuScore);
-      if (cpuScore === 2) {
+      if (cpuScore === 10) {
         $('audio#lose')[0].play();
         setTimeout(function () {
           $('.battle').css('background','none');
