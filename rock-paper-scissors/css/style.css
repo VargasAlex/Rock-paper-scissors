@@ -392,28 +392,99 @@ p {
   transform: translateY(4px);
 }
 
-/* @media (max-width: 500px) {
-  .battlefield {
-    display: block;
-  }
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
 
-  .choices {
-    display: flex;
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .edit-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .input-group{
+      border-radius: 3px;
+      box-sizing: border-box;
+      background-color: #fff;
+      border: 1px solid #efefef;
+      width: 300px;
+      margin: .25em;
+      align-self: center;
+      flex-basis: 450px;
+    }
 
-  }
+    input[type="text"] {
+      width: 200px;
+    }
 
-  .rock {
-    width: 50px;
-    height: 50px;
-  }
+    textarea {
+      width: 200px;
+    }
+}
 
-  .paper {
-    width: 50px;
-    height: 50px;
-  }
 
-  .scissors {
-    width: 50px;
-    height: 50px;
-  }
-} */
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3) {
+    .edit-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .input-group{
+      border-radius: 3px;
+      box-sizing: border-box;
+      background-color: #fff;
+      border: 1px solid #efefef;
+      width: 500px;
+      margin: .25em;
+      align-self: center;
+      flex-basis: 450px;
+    }
+
+    input[type="text"] {
+      width: 200px;
+    }
+
+    textarea {
+      width: 200px;
+    }
+}
+
+
+/* ----------- iPhone X ----------- */
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 812px)
+  and (-webkit-min-device-pixel-ratio: 3) {
+    .edit-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .input-group{
+      border-radius: 3px;
+      box-sizing: border-box;
+      background-color: #fff;
+      border: 1px solid #efefef;
+      width: 300px;
+      margin: .25em;
+      align-self: center;
+      flex-basis: 450px;
+    }
+
+    input[type="text"] {
+      width: 200px;
+    }
+
+    textarea {
+      width: 200px;
+    }
+}
